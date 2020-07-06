@@ -15,7 +15,7 @@ if (!file.exists("household_power_consumption.txt")) {
 }
 
 # read unzipped data
-data <- read.csv("./household_power_consumption.txt", header=TRUE, sep=';')
+data <- read.csv("./household_power_consumption.txt", header=TRUE,  na.strings = "?",sep=';')
 
 # subset based on date
 library(lubridate)
